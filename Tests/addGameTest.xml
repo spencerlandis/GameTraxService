@@ -1,0 +1,82 @@
+<RestClientRequest>
+  <option name="biscuits">
+    <list>
+      <Biscuit>
+        <option name="date" value="-1" />
+        <option name="domain" value="localhost" />
+        <option name="name" value="JSESSIONID" />
+        <option name="path" value="/GameTraxService_war_exploded" />
+        <option name="value" value="cc07bff35e7046b1c45b46eb4808" />
+      </Biscuit>
+    </list>
+  </option>
+  <option name="httpMethod" value="GET" />
+  <option name="urlBase" value="http://localhost:8080" />
+  <option name="urlPath" value="/GameTraxService_war_exploded/AddGame/" />
+  <option name="headers">
+    <list>
+      <KeyValuePair>
+        <option name="key" value="Accept" />
+        <option name="value" value="*/*" />
+      </KeyValuePair>
+      <KeyValuePair>
+        <option name="key" value="Cache-Control" />
+        <option name="value" value="no-cache" />
+      </KeyValuePair>
+    </list>
+  </option>
+  <option name="parameters">
+    <list>
+      <KeyValuePair>
+        <option name="key" value="user_id" />
+        <option name="value" value="1" />
+      </KeyValuePair>
+      <KeyValuePair>
+        <option name="key" value="game_id" />
+        <option name="value" value="24035" />
+      </KeyValuePair>
+      <KeyValuePair>
+        <option name="key" value="deck" />
+        <option name="value" value="Set during the events of Halo 2, Halo 3: ODST puts players as a silent Orbital Drop Shock Trooper (known as The Rookie) as he traverses through the Covenant-occupied metropolis of New Mombasa to find the whereabouts of his squadmates." />
+      </KeyValuePair>
+      <KeyValuePair>
+        <option name="key" value="icon_url" />
+        <option name="value" value="http:\/\/static.giantbomb.com\/uploads\/square_avatar\/8\/87790\/2079827-box_haloodst.png" />
+      </KeyValuePair>
+      <KeyValuePair>
+        <option name="key" value="medium_url" />
+        <option name="value" value="blah" />
+      </KeyValuePair>
+      <KeyValuePair>
+        <option name="key" value="screen_url" />
+        <option name="value" value="blah" />
+      </KeyValuePair>
+      <KeyValuePair>
+        <option name="key" value="small_url" />
+        <option name="value" value="blah" />
+      </KeyValuePair>
+      <KeyValuePair>
+        <option name="key" value="thumb_url" />
+        <option name="value" value="blah" />
+      </KeyValuePair>
+      <KeyValuePair>
+        <option name="key" value="tiny_url" />
+        <option name="value" value="blah" />
+      </KeyValuePair>
+      <KeyValuePair>
+        <option name="key" value="name" />
+        <option name="value" value="Halo 3: ODST" />
+      </KeyValuePair>
+      <KeyValuePair>
+        <option name="key" value="site_detail_url" />
+        <option name="value" value="http:\/\/www.giantbomb.com\/halo-3-odst\/3030-24035\/" />
+      </KeyValuePair>
+    </list>
+  </option>
+  <option name="parametersEnabled" value="true" />
+  <option name="haveTextToSend" value="false" />
+  <option name="haveFileToSend" value="false" />
+  <option name="isFileUpload" value="false" />
+  <option name="textToSend" value="" />
+  <option name="filesToSend" value="" />
+</RestClientRequest>

@@ -39,6 +39,7 @@
     <orderEntry type="library" name="hibernate3" level="project" />
     <orderEntry type="library" name="mysql-connector-java-5.0.8-bin" level="project" />
     <orderEntry type="library" name="gson-2.2.4" level="project" />
+    <orderEntry type="library" name="gson-2.2.4 (2)" level="project" />
   </component>
 </module>
 

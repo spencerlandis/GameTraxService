@@ -7,6 +7,7 @@ import com.google.gson.Gson;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
+import javax.persistence.Query;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -18,37 +19,41 @@ import java.util.ArrayList;
 /**
  * Created by spencerlandis on 4/19/14.
  */
-public class CreateAccount extends HttpServlet {
-
+public class RemoveGame extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String email = request.getParameter("email");
-        String password = request.getParameter("password");
-        User user = new User();
-        user.setEmail(email);
-        user.setPassword(password);
-        user.setGames(new ArrayList<Game>());
+        int user_id = Integer.parseInt(request.getParameter("user_id"));
+        int game_id = Integer.parseInt(request.getParameter("game_id"));
         EntityManagerFactory emf = null;
         EntityManager em = null;
         try{
             emf = Persistence.createEntityManagerFactory("GameTrax");
             em = emf.createEntityManager();
             em.getTransaction().begin();
-            em.persist(user);
+
+            User user = em.find(User.class, user_id);
+            Game game = em.find(Game.class, game_id);
+            for(int i = 0; i < user.getGames().size(); i++)
+            {
+                if(user.getGames().get(i).getGame_id()==game.getGame_id())
+                {
+                    user.getGames().remove(i);
+                }
+            }
             em.getTransaction().commit();
+
+            PrintWriter out = response.getWriter();
+            out.print("success");
+            out.flush();
+            out.close();
+        }catch(Exception e){
+            PrintWriter out = response.getWriter();
+            e.printStackTrace(out);
+        }
+        finally
+        {
             em.close();
             emf.close();
-        }catch(Exception e){
-            response.setContentType("text/plain");
-            PrintWriter out = response.getWriter();
-            out.print("null");
-            out.flush();
-            return;
         }
 
-        Gson gson = new Gson();
-        response.setContentType("text/json");
-        PrintWriter out = response.getWriter();
-        out.print(gson.toJson(user).toString());
-        out.flush();
     }
 }

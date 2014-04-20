@@ -19,6 +19,18 @@
         <servlet-name>CreateAccount</servlet-name>
         <servlet-class>Services.CreateAccount</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Login</servlet-name>
+        <servlet-class>Services.Login</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AddGame</servlet-name>
+        <servlet-class>Services.AddGame</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>RemoveGame</servlet-name>
+        <servlet-class>Services.RemoveGame</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>WSServlet</servlet-name>
         <url-pattern>/services/*</url-pattern>
@@ -26,5 +38,17 @@
     <servlet-mapping>
         <servlet-name>CreateAccount</servlet-name>
         <url-pattern>/CreateAccount/</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Login</servlet-name>
+        <url-pattern>/Login/</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AddGame</servlet-name>
+        <url-pattern>/AddGame/</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RemoveGame</servlet-name>
+        <url-pattern>/RemoveGame/</url-pattern>
     </servlet-mapping>
 </web-app>
