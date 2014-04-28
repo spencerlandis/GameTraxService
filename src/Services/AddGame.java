@@ -45,11 +45,11 @@ public class AddGame extends HttpServlet {
                 game.setGame_id(game_id);
                 Image i = new Image();
                 i.setIconUrl(request.getParameter("icon_url"));
-                i.setMediumUrl(request.getParameter("medium_url"));
-                i.setScreenUrl((request.getParameter("screen_url")));
-                i.setSmallUrl(request.getParameter("small_url"));
-                i.setThumbUrl(request.getParameter("thumb_url"));
-                i.setTinyUrl(request.getParameter("tiny_url"));
+                i.setMediumUrl("blah");
+                i.setScreenUrl("blah");
+                i.setSmallUrl("blah");
+                i.setThumbUrl("blah");
+                i.setTinyUrl("blah");
                 em.persist(i);
                 em.getTransaction().commit();
                 em.getTransaction().begin();
